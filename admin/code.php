@@ -7,9 +7,6 @@ if (isset($_POST['add_category_btn'])) {
     $name = $_POST['name'];
     $slug = $_POST['slug'];
     $description = $_POST['description'];
-    $meta_title = $_POST['meta_title'];
-    $meta_description = $_POST['meta_description'];
-    $meta_keywords = $_POST['meta_keywords'];
     $status = isset($_POST['status']) ? '1' : '0';
     $popular = isset($_POST['popular']) ? '1' : '0';
 
@@ -22,7 +19,7 @@ if (isset($_POST['add_category_btn'])) {
 
     $query = "INSERT INTO categories
     (name,slug,description,meta_title,meta_description,meta_keywords,status,popular,image) 
-    VALUES('$name','$slug','$description','$meta_title','$meta_description','$meta_keywords','$status','$popular','$filename')";
+    VALUES('$name','$slug','$description','$status','$popular','$filename')";
 
     $cate_query_run = mysqli_query($con, $query);
 
@@ -37,9 +34,6 @@ if (isset($_POST['add_category_btn'])) {
     $name = $_POST['name'];
     $slug = $_POST['slug'];
     $description = $_POST['description'];
-    $meta_title = $_POST['meta_title'];
-    $meta_description = $_POST['meta_description'];
-    $meta_keywords = $_POST['meta_keywords'];
     $status = isset($_POST['status']) ? '1' : '0';
     $popular = isset($_POST['popular']) ? '1' : '0';
 
@@ -55,9 +49,7 @@ if (isset($_POST['add_category_btn'])) {
 
     $path = "../uploads/category_pics";
 
-    $update_query = "UPDATE categories SET name='$name', slug='$slug', description='$description', 
-    meta_title='$meta_title', meta_description='$meta_description', meta_keywords='$meta_keywords',
-    status='$status', popular='$popular', image='$update_filename' WHERE id='$category_id' ";
+    $update_query = "UPDATE categories SET name='$name', slug='$slug', description='$description', status='$status', popular='$popular', image='$update_filename' WHERE id='$category_id' ";
 
     $update_query_run = mysqli_query($con, $update_query);
 
@@ -98,14 +90,8 @@ if (isset($_POST['add_category_btn'])) {
     $category_id = $_POST['category_id'];
     $name = $_POST['name'];
     $slug = $_POST['slug'];
-    $small_description = $_POST['small_description'];
     $description = $_POST['description'];
-    $original_price = $_POST['original_price'];
-    $selling_price = $_POST['selling_price'];
-    $qty = $_POST['qty'];
-    $meta_title = $_POST['meta_title'];
-    $meta_description = $_POST['meta_description'];
-    $meta_keywords = $_POST['meta_keywords'];
+    $price = $_POST['price'];
     $status = isset($_POST['status']) ? '1' : '0';
     $trending = isset($_POST['trending']) ? '1' : '0';
 
@@ -117,8 +103,8 @@ if (isset($_POST['add_category_btn'])) {
     $filename = time() . "." . $image_ext;
 
     if ($name != "" && $slug != "" && $description != "") {
-        $product_query = "INSERT INTO products(category_id, name, slug, small_description, description, original_price, selling_price, qty, meta_title, meta_description, meta_keywords, status, trending, image) 
-        VALUES ('$category_id', '$name', '$slug', '$small_description', '$description', '$original_price', '$selling_price', '$qty', '$meta_title', '$meta_description', '$meta_keywords', '$status', '$trending', '$filename')";
+        $product_query = "INSERT INTO products(category_id, name, slug, description, price, status, trending, image) 
+        VALUES ('$category_id', '$name', '$slug', '$description', '$price', '$status', '$trending', '$filename')";
 
         $product_query_run = mysqli_query($con, $product_query);
 
@@ -136,14 +122,8 @@ if (isset($_POST['add_category_btn'])) {
     $category_id = $_POST['category_id'];
     $name = $_POST['name'];
     $slug = $_POST['slug'];
-    $small_description = $_POST['small_description'];
     $description = $_POST['description'];
-    $original_price = $_POST['original_price'];
-    $selling_price = $_POST['selling_price'];
-    $qty = $_POST['qty'];
-    $meta_title = $_POST['meta_title'];
-    $meta_description = $_POST['meta_description'];
-    $meta_keywords = $_POST['meta_keywords'];
+    $price = $_POST['price'];
     $status = isset($_POST['status']) ? '1' : '0';
     $trending = isset($_POST['trending']) ? '1' : '0';
 
@@ -164,14 +144,8 @@ if (isset($_POST['add_category_btn'])) {
         category_id=?, 
         name=?, 
         slug=?, 
-        small_description=?, 
         description=?, 
-        original_price=?, 
-        selling_price=?, 
-        qty=?, 
-        meta_title=?, 
-        meta_description=?, 
-        meta_keywords=?, 
+        price=?, 
         status=?, 
         trending=?, 
         image=? 
@@ -182,14 +156,8 @@ if (isset($_POST['add_category_btn'])) {
         $category_id,
         $name,
         $slug,
-        $small_description,
         $description,
-        $original_price,
-        $selling_price,
-        $qty,
-        $meta_title,
-        $meta_description,
-        $meta_keywords,
+        $price,
         $status,
         $trending,
         $update_filename,

@@ -1,0 +1,65 @@
+# SOFI/
+├── admin/
+│   ├── includes/
+│   │   ├── footer.php                          # Admin footer template
+│   │   ├── header.php                          # Admin header template
+│   │   ├── navbar.php                          # Admin navbar template
+│   │   └── sidebar.php                         # Admin sidebar template
+│   ├── logs/
+│   │   └── db_errors.log                       # Database error log
+│   ├── add-category.php                        # Admin page for adding categories
+│   ├── add-products.php                        # Admin page for adding products
+│   ├── category.php                            # Admin page for viewing categories
+│   ├── code.php                                # Admin code-related functionality
+│   ├── edit-category.php                       # Admin page for editing categories
+│   ├── edit-product.php                        # Admin page for editing products
+│   ├── index.php                               # Admin dashboard or landing page
+│   └── products.php                            # Admin page for viewing products
+├── assets/
+│   ├── css/
+│   │   ├── bootstrap.min.css                   # Bootstrap framework CSS
+│   │   └── custom.css                          # Custom CSS styles
+│   ├── js/
+│   │   ├── jQuery/
+│   │   │   ├── jquery-3.7.1.min.js             # jQuery library
+│   │   └── Plugins/
+│   │       ├── perfect-scrollbar.min.js        # Example plugin
+│   │       ├── smooth-scrollbar.min.js         # Example plugin
+│   │   ├── bootstrap.bundle.min.js             # Bootstrap JavaScript
+│   │   ├── custom.js                           # Custom JavaScript
+│   │   └── generateUsername.js                 # Example script
+├── config/
+│   ├── config.php                              # Main configuration file
+│   └── dbcon.php                               # Database connection configuration
+├── db/
+│   └── sofi.sql                                # SQL file for database schema
+├── functions/
+│   ├── authcode.php                            # Authentication-related functions
+│   ├── handlecart.php                          # Shopping cart handling functions
+│   ├── myfunction.php                          # General utility functions
+│   └── userfunctions.php                       # User-related functions
+├── includes/
+│   ├── footer.php                              # Footer template for website
+│   ├── header.php                              # Header template for website
+│   └── navbar.php                              # Navbar template for website
+├── middleware/
+│   └── adminMiddleware.php                     # Middleware for admin section
+├── node_modules/
+├── uploads/
+│   ├── category_pics/                          # Uploaded category pictures
+│   └── product_pics/                           # Uploaded product pictures
+├── .eslintrc.json                              # ESLint configuration file
+├── .prettierc                                  # Prettier configuration file
+├── authenticate.php                            # Authentication handling script
+├── cart.php                                    # Shopping cart page
+├── categories.php                              # Categories page
+├── index.php                                   # Main index or homepage
+├── login.php                                   # Login page
+├── logout.php                                  # Logout functionality
+├── package-lock.json                           # Package lock file (if using Node.js)
+├── package.json                                # Package.json file (if using Node.js)
+├── product_view.php                            # Product view page
+├── products.php                                # Products page
+├── README.md                                   # ReadMe file in Markdown format
+├── DirectoryTree.txt                           # Example text file
+└── register.php                                # User registration page
